@@ -18,7 +18,7 @@ export class AppComponent {
   editorOptions: MonacoEditorConstructionOptions = {
     language: "xml",
     roundedSelection: true,
-    autoIndent: true
+    autoIndent: "full"
   };
   code = this.getCode();
 
