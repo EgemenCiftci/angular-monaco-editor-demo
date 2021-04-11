@@ -1,0 +1,9 @@
+p {
+  font-family: Lato;
+}
+
+ngx-monaco-editor {
+  height: calc(100% - 60px);
+  width: 100%;
+  padding: 15px;
+}
