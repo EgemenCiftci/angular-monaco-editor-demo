@@ -16,9 +16,10 @@ export class AppComponent {
   @ViewChild(MonacoEditorComponent, { static: false })
   monacoComponent: MonacoEditorComponent;
   editorOptions: MonacoEditorConstructionOptions = {
-    language: 'xml',
+    language: 'html',
     roundedSelection: true,
     autoIndent: 'full',
+    theme: 'hc-black', // vs, vs-dark, hc-black
   };
   code = this.getCode();
 
@@ -28,7 +29,7 @@ export class AppComponent {
         filter((isLoaded) => isLoaded),
         take(1)
       )
-      .subscribe(() => {});
+      .subscribe();
   }
 
   editorInit(editor: MonacoStandaloneCodeEditor) {}
