@@ -35,7 +35,6 @@ export class AppComponent {
 
   getCode() {
     return (
-      // tslint:disable-next-line: max-line-length
       '<html><!-- // !!! Tokens can be inspected using F1 > Developer: Inspect Tokens !!! -->\n<head>\n	<!-- HTML comment -->\n	<style type="text/css">\n		/* CSS comment */\n	</style>\n	<script type="javascript">\n		// JavaScript comment\n	</' +
       'script>\n</head>\n<body></body>\n</html>'
     );
