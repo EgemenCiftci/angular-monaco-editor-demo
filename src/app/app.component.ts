@@ -17,9 +17,8 @@ export class AppComponent {
   monacoComponent: MonacoEditorComponent;
   editorOptions: MonacoEditorConstructionOptions = {
     language: 'html', // java, javascript, python, csharp, html, markdown, ruby
-    roundedSelection: true,
-    autoIndent: 'full',
-    theme: 'hc-black', // vs, vs-dark, hc-black
+    theme: 'vs-dark', // vs, vs-dark, hc-black
+    automaticLayout: true,
   };
   code = this.getCode();
 
