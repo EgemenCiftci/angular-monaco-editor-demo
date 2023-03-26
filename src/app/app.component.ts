@@ -16,7 +16,7 @@ export class AppComponent {
   @ViewChild(MonacoEditorComponent, { static: false })
   monacoComponent: MonacoEditorComponent;
   editorOptions: MonacoEditorConstructionOptions = {
-    language: 'html',
+    language: 'html', // java, javascript, python, csharp, html, markdown, ruby
     roundedSelection: true,
     autoIndent: 'full',
     theme: 'hc-black', // vs, vs-dark, hc-black
