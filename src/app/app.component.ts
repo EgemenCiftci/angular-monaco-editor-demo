@@ -1,10 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { filter, take } from 'rxjs/operators';
 import {
   MonacoEditorComponent,
   MonacoEditorConstructionOptions,
-  MonacoEditorLoaderService,
-  MonacoStandaloneCodeEditor,
 } from '@materia-ui/ngx-monaco-editor';
 
 @Component({
@@ -21,17 +18,6 @@ export class AppComponent {
     automaticLayout: true,
   };
   code = this.getCode();
-
-  constructor(private monacoLoaderService: MonacoEditorLoaderService) {
-    this.monacoLoaderService.isMonacoLoaded$
-      .pipe(
-        filter((isLoaded) => isLoaded),
-        take(1)
-      )
-      .subscribe();
-  }
-
-  editorInit(editor: MonacoStandaloneCodeEditor) {}
 
   getCode() {
     return (
